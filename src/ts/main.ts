@@ -49,7 +49,7 @@ if (process.env.NODE_ENV !== 'production') {
     path: '/io',
   })
 } else {
-  sock = io('https://np.cnnd.dev:3000', {
+  sock = io('https://npbe.cnnd.dev', {
     path: '/io',
   })
 }
