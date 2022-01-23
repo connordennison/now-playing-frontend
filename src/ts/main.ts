@@ -1,5 +1,5 @@
 import '../css/main.css'
-import { io } from 'socket.io-client'
+import io, { Socket } from 'socket.io-client'
 
 type ListeningData = {
   device: string
@@ -42,7 +42,7 @@ function removeClass(el: Element, className: string) {
 }
 
 // @ts-ignore
-let sock
+let sock: Socket
 
 if (process.env.NODE_ENV !== 'production') {
   sock = io('http://localhost:3000', {
